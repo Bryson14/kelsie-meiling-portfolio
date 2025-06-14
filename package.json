@@ -6,9 +6,14 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "pnpm run build && pnpm run upload",
+    "upload": "npx wrangler pages deploy dist --project-name=kelsie-meiling-portfolio"
   },
   "dependencies": {
-    "astro": "^5.9.3"
+    "@tailwindcss/vite": "^4.1.10",
+    "astro": "^5.9.3",
+    "sharp": "^0.34.2",
+    "tailwindcss": "^4.1.10"
   }
 }

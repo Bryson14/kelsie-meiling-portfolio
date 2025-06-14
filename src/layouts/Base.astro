@@ -1,0 +1,87 @@
+---
+import "@/styles/global.css";
+
+import Head from "../components/Head.astro";
+import ScrollToTop from "../components/ScrollToTop.astro";
+import "../styles/global.css";
+
+interface Props {
+    title?: string;
+    description?: string;
+    image?: string;
+    type?: "website" | "article";
+}
+
+const {
+    title = "Smiling Dev Consulting - Professional Tech Solutions",
+    description = "Expert tech consulting services by Bryson Meiling, specializing in web development, AI integration, and digital transformation.",
+    image,
+    type = "website",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <Head
+            title={title}
+            description={description}
+            image={image}
+            type={type}
+        />
+    </head>
+    <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+        <div class="flex flex-col min-h-screen">
+            <main class="flex-grow">
+                <slot />
+            </main>
+
+            <footer class="mt-auto py-8 bg-gray-50 dark:bg-gray-800">
+                <div class="container mx-auto px-4">
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+                    >
+                        <div
+                            class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700"
+                        >
+                            <div
+                                class="text-center text-gray-600 dark:text-gray-400 text-sm"
+                            >
+                                <p>
+                                    © {new Date().getFullYear()} Kelsie Meiling.
+                                    rights reserved.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <ScrollToTop />
+            <script>
+                // Add preload class to prevent transitions on page load
+                document.documentElement.classList.add("preload");
+                window.addEventListener("load", () => {
+                    document.documentElement.classList.remove("preload");
+                });
+
+                // Add smooth scroll behavior to all internal links
+                document
+                    .querySelectorAll('a[href^="/"]:not([href^="//"])')
+                    .forEach((link) => {
+                        link.addEventListener("click", (e) => {
+                            const href = link.getAttribute("href");
+                            if (href && href.startsWith("/")) {
+                                const target = document.querySelector(href);
+                                if (target) {
+                                    e.preventDefault();
+                                    target.scrollIntoView({
+                                        behavior: "smooth",
+                                    });
+                                }
+                            }
+                        });
+                    });
+            </script>
+        </div>
+    </body>
+</html>

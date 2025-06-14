@@ -1,16 +1,386 @@
 ---
-
+import Layout from "@/layouts/Base.astro";
+import headshot from "@/assets/headshot.jpeg";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<div class="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
+		<!-- Hero Section -->
+		<header class="relative overflow-hidden bg-white shadow-lg">
+			<div
+				class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-5"
+			>
+			</div>
+			<div class="relative max-w-6xl mx-auto px-6 py-16 sm:py-24">
+				<div class="text-center space-y-6">
+					<div class="flex justify-center mb-8">
+						<img
+							src={headshot.src}
+							alt="Kelsie Meiling"
+							class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover shadow-2xl ring-4 ring-white"
+						/>
+					</div>
+					<h1
+						class="text-5xl sm:text-7xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent leading-tight"
+					>
+						Kelsie Meiling
+					</h1>
+					<p
+						class="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed"
+					>
+						Art Director | Marketing Strategy & Brand Storytelling |
+						People-Focused Creative Leader
+					</p>
+					<div
+						class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
+					>
+						<a
+							href="mailto:kmeiling15@gmail.com"
+							class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors duration-200 font-medium"
+						>
+							<svg
+								class="w-5 h-5 mr-2"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+							>
+								<path
+									d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+								></path>
+								<path
+									d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+								></path>
+							</svg>
+							Get in Touch
+						</a>
+						<a
+							href="https://www.linkedin.com/in/kelsiemeiling"
+							target="_blank"
+							class="inline-flex items-center px-6 py-3 border-2 border-indigo-600 text-indigo-600 rounded-full hover:bg-indigo-600 hover:text-white transition-all duration-200 font-medium"
+						>
+							<svg
+								class="w-5 h-5 mr-2"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+									clip-rule="evenodd"></path>
+							</svg>
+							LinkedIn
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Main Content -->
+		<main class="max-w-6xl mx-auto px-6 py-16 space-y-20">
+			<!-- Skills Section -->
+			<section class="text-center">
+				<h2 class="text-4xl font-bold text-gray-800 mb-12">
+					Core Expertise
+				</h2>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div
+						class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+					>
+						<div
+							class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4"
+						>
+							<svg
+								class="w-8 h-8 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+								></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-2">
+							Team Organization
+						</h3>
+						<p class="text-gray-600 leading-relaxed">
+							Building cohesive creative teams and streamlining
+							workflows for maximum impact and efficiency.
+						</p>
+					</div>
+					<div
+						class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+					>
+						<div
+							class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4"
+						>
+							<svg
+								class="w-8 h-8 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"
+								></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-2">
+							User Interface Design
+						</h3>
+						<p class="text-gray-600 leading-relaxed">
+							Crafting intuitive and visually stunning interfaces
+							that enhance user engagement and drive results.
+						</p>
+					</div>
+					<div
+						class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+					>
+						<div
+							class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4"
+						>
+							<svg
+								class="w-8 h-8 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M9 5H7a2 2 0 00-2 2v6a2 2 0 002 2h2m0 0h2m-2 0v6a2 2 0 002 2h6a2 2 0 002-2V9a2 2 0 00-2-2h-2m-6 6V9a2 2 0 012-2h2"
+								></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-2">
+							UX Research
+						</h3>
+						<p class="text-gray-600 leading-relaxed">
+							Data-driven design decisions backed by thorough user
+							research and behavioral insights.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Experience Section -->
+			<section>
+				<h2 class="text-4xl font-bold text-gray-800 text-center mb-16">
+					Professional Journey
+				</h2>
+				<div class="space-y-12">
+					<!-- Credit.com Experience -->
+					<div class="bg-white rounded-2xl p-8 shadow-lg">
+						<div
+							class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6"
+						>
+							<div>
+								<h3 class="text-2xl font-bold text-gray-800">
+									Credit.com
+								</h3>
+								<p class="text-lg text-indigo-600 font-medium">
+									7 years 1 month
+								</p>
+							</div>
+							<div class="text-sm text-gray-500 mt-2 lg:mt-0">
+								Salt Lake City, Utah
+							</div>
+						</div>
+
+						<div class="space-y-6">
+							<div class="border-l-4 border-indigo-600 pl-6">
+								<h4 class="text-xl font-semibold text-gray-800">
+									Art Director
+								</h4>
+								<p class="text-gray-600 mb-2">
+									December 2021 - Present (3 years 7 months)
+								</p>
+								<p class="text-gray-700 leading-relaxed">
+									Leading creative vision and brand strategy,
+									overseeing design teams, and driving
+									innovative marketing campaigns that elevate
+									brand presence and user engagement across
+									all touchpoints.
+								</p>
+							</div>
+
+							<div class="border-l-4 border-purple-500 pl-6">
+								<h4 class="text-xl font-semibold text-gray-800">
+									Senior Graphic Designer
+								</h4>
+								<p class="text-gray-600 mb-2">
+									January 2019 - December 2021 (3 years)
+								</p>
+								<p class="text-gray-700 leading-relaxed">
+									Developed comprehensive visual identities,
+									managed complex design projects, and
+									mentored junior designers while maintaining
+									brand consistency across multiple platforms
+									and campaigns.
+								</p>
+							</div>
+
+							<div class="border-l-4 border-pink-500 pl-6">
+								<h4 class="text-xl font-semibold text-gray-800">
+									Graphic Designer
+								</h4>
+								<p class="text-gray-600 mb-2">
+									June 2018 - January 2019 (8 months)
+								</p>
+								<p class="text-gray-700 leading-relaxed">
+									Created engaging visual content,
+									collaborated with cross-functional teams,
+									and contributed to the evolution of
+									Credit.com's design language and user
+									experience.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Method Communications Experience -->
+					<div class="bg-white rounded-2xl p-8 shadow-lg">
+						<div
+							class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6"
+						>
+							<div>
+								<h3 class="text-2xl font-bold text-gray-800">
+									Method Communications
+								</h3>
+								<p class="text-lg text-teal-600 font-medium">
+									4 years 3 months
+								</p>
+							</div>
+							<div class="text-sm text-gray-500 mt-2 lg:mt-0">
+								Salt Lake City, Utah
+							</div>
+						</div>
+
+						<div class="border-l-4 border-teal-600 pl-6">
+							<h4 class="text-xl font-semibold text-gray-800">
+								Operations Supervisor
+							</h4>
+							<p class="text-gray-600 mb-2">
+								July 2014 - September 2018 (4 years 3 months)
+							</p>
+							<p class="text-gray-700 leading-relaxed">
+								Managed operational workflows, coordinated team
+								communications, and optimized processes to
+								enhance productivity and client satisfaction in
+								a fast-paced agency environment.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Education Section -->
+			<section class="text-center">
+				<h2 class="text-4xl font-bold text-gray-800 mb-12">
+					Education
+				</h2>
+				<div
+					class="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto"
+				>
+					<div
+						class="w-20 h-20 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6"
+					>
+						<svg
+							class="w-10 h-10 text-white"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M12 14l9-5-9-5-9 5 9 5z"></path>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+							></path>
+						</svg>
+					</div>
+					<h3 class="text-2xl font-bold text-gray-800 mb-2">
+						Utah Valley University
+					</h3>
+					<p class="text-lg text-orange-600 font-medium mb-2">
+						Bachelor of Fine Arts
+					</p>
+					<p class="text-gray-600">
+						Graphic Design, Art and Visual Communications
+					</p>
+					<p class="text-gray-500 text-sm mt-2">2015 - 2018</p>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="bg-gray-800 text-white py-12">
+			<div class="max-w-6xl mx-auto px-6 text-center">
+				<h3 class="text-2xl font-bold mb-4">
+					Let's Create Something Amazing Together
+				</h3>
+				<p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+					Ready to bring your brand vision to life? I'm passionate
+					about crafting compelling visual stories that resonate with
+					audiences and drive meaningful results.
+				</p>
+				<div
+					class="flex flex-col sm:flex-row items-center justify-center gap-4"
+				>
+					<a
+						href="mailto:kmeiling15@gmail.com"
+						class="inline-flex items-center px-8 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors duration-200 font-medium"
+					>
+						<svg
+							class="w-5 h-5 mr-2"
+							fill="currentColor"
+							viewBox="0 0 20 20"
+						>
+							<path
+								d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+							></path>
+							<path
+								d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+							></path>
+						</svg>
+						kmeiling15@gmail.com
+					</a>
+					<a
+						href="https://www.linkedin.com/in/kelsiemeiling"
+						target="_blank"
+						class="inline-flex items-center px-8 py-3 border-2 border-gray-300 text-gray-300 rounded-full hover:bg-white hover:text-gray-800 transition-all duration-200 font-medium"
+					>
+						<svg
+							class="w-5 h-5 mr-2"
+							fill="currentColor"
+							viewBox="0 0 20 20"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+								clip-rule="evenodd"></path>
+						</svg>
+						Connect on LinkedIn
+					</a>
+				</div>
+				<div class="mt-8 pt-8 border-t border-gray-700">
+					<p class="text-gray-400 text-sm">
+						© 2025 Kelsie Meiling. Crafted with passion in Salt
+						Lake City, Utah.
+					</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+</Layout>
